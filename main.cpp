@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <boost/algorithm/string.hpp>
-#include <boost/foreach.hpp>
 
 using namespace std;
 using namespace boost;
@@ -19,7 +18,7 @@ int main(int argc, char **argv)
 	split(cells, line, is_any_of("|"));
 	
 	cout << "|";
-	BOOST_FOREACH(string cell, cells)
+	for (const string &cell: cells)
 	{
 		if (cell.length() == 0)
 			continue;
