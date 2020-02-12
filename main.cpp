@@ -24,8 +24,8 @@ int main(int argc, char **argv)
 			continue;
 		
 		size_t first = cell.find_first_not_of(' ');
-		size_t last = cell.find_last_not_of(' ');
-		string text = cell.substr(first, (last - first + 1));
+		size_t last  = cell.find_last_not_of(' ');
+		string text  = cell.substr(first, (last - first + 1));
 		
 		size_t leftSpaces  = (cell.length() - text.length()) / 2;
 		size_t rightSpaces = cell.length() - text.length() - leftSpaces;
